@@ -1,30 +1,100 @@
-﻿body {
-    padding-top: 50px;
+﻿/* GENERAL */
+
+body {
+    padding-top: 30px;
     padding-bottom: 20px;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
+body {
+    color: #FFF;
+
+}
+
+a {
+    color: #FFF;
+    text-decoration: underline #FFF;
+}
+
+a:hover {
+    color: #FFEDAA;
+}
+
+.jumbotron {
+    background-color: chocolate;
+}
+
+div.body-content {
+    padding-top: 20px;
     padding-left: 15px;
     padding-right: 15px;
+    background-color: whitesmoke;
+    border-width: 1px;
+    border-color: black;
+    border-style: groove
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+.container > div.navbar-header {
+    border-radius: 10px 10px 0 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+button.navbar-toggle {
+    margin: 5px 20px 5px 5px;
+    background-color: #211858;
 }
+
+div.container {
+    min-height: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* ABOUT */
+
+.about-introduction, .about-early-years, .about-education, .about-proffesional-career {
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.about-introduction {
+    background-color: goldenrod;
+}
+
+.about-early-years {
+    background-color: green;
+}
+
+.about-early-years-images {
+    text-align: center;
+}
+
+.about-early-years-image {
+    width: 220px;
+    height: 220px;
+    margin: 5px;
+}
+
+.about-education {
+    background-color: chocolate;
+}
+
+.about-proffesional-career {
+    background-color: darkorchid;
+}
+
+/* NAVBAR */
 
 .navbar-inverse {
+    background-color: white;
+    border-width: 0px;
+    padding-left: 0px;
+}
+
+.navbar-collapse {
     background-color: #3B3176;
+    border-radius: 10px 10px 0px 0px;
 }
 
 .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
@@ -37,4 +107,24 @@ textarea {
  
 .navbar-header:hover, ul.nav li:hover {
     background-color: #211858;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #3B3176;
+    border-radius: 0px 0px 10px 10px;
+}
+
+footer * {
+    text-align: center;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: none;
 }
