@@ -7,20 +7,24 @@ body {
 
 body {
     color: #FFF;
-
 }
 
 a {
     color: #FFF;
     text-decoration: underline #FFF;
+    font-weight: bold;
 }
 
 a:hover {
-    color: #FFEDAA;
+    color: #0A76C1;
 }
 
 .jumbotron {
-    background-color: chocolate;
+    background-color: #1A1A59;
+}
+
+.image-box {
+    box-shadow: inset 0 0 20px #888888;
 }
 
 div.body-content {
@@ -30,10 +34,11 @@ div.body-content {
     background-color: whitesmoke;
     border-width: 1px;
     border-color: black;
-    border-style: groove
+    border-style: groove;
 }
 
 .container > div.navbar-header {
+    -ms-border-radius: 10px 10px 0 0;
     border-radius: 10px 10px 0 0;
     margin-left: 0;
     margin-right: 0;
@@ -50,40 +55,6 @@ div.container {
     padding-right: 0;
 }
 
-/* ABOUT */
-
-.about-introduction, .about-early-years, .about-education, .about-proffesional-career {
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-}
-
-.about-introduction {
-    background-color: goldenrod;
-}
-
-.about-early-years {
-    background-color: green;
-}
-
-.about-early-years-images {
-    text-align: center;
-}
-
-.about-early-years-image {
-    width: 220px;
-    height: 220px;
-    margin: 5px;
-}
-
-.about-education {
-    background-color: chocolate;
-}
-
-.about-proffesional-career {
-    background-color: darkorchid;
-}
-
 /* NAVBAR */
 
 .navbar-inverse {
@@ -94,6 +65,7 @@ div.container {
 
 .navbar-collapse {
     background-color: #3B3176;
+    -ms-border-radius: 10px 10px 0px 0px;
     border-radius: 10px 10px 0px 0px;
 }
 
@@ -127,4 +99,42 @@ footer * {
 
 footer a:hover {
     text-decoration: none;
+}
+
+/* ABOUT */
+
+div.about-section {
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.about-section h1 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.about-introduction {
+    background-color: #1A1A59;
+}
+
+.about-early-years {
+    background-color: #2D6E12;
+}
+
+.about-early-years-image {
+    text-align: center;
+    margin: 10px auto;
+    width: 220px;
+    height: 220px;
+    -ms-background-size: 220px 220px;
+    background-size: 220px 220px;
+}
+
+.about-education {
+    background-color: chocolate;
+}
+
+.about-proffesional-career {
+    background-color: darkorchid;
 }

@@ -142,9 +142,10 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Images\About-Early-Years-Waluigis-Treasure-Hunt-Title-Screen.PNG" />
     <Content Include="Content\Images\GitHub-Mark-32px.png" />
     <Content Include="Content\Images\GitHub-Mark-Light-32px.png" />
+    <Content Include="Content\Images\KaizoReturns.PNG" />
+    <Content Include="Content\Images\WaluigisTreasureHunt.PNG" />
     <Content Include="Content\Texts\About.txt" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -152,8 +153,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Content\Downloads\Programmeringsolympiaden 2012.pdf" />
-    <Content Include="Content\Downloads\Waluigis Treasure Hunt.ips" />
+    <Content Include="Content\Downloads\Programmeringsolympiaden2012.pdf" />
+    <Content Include="Content\Downloads\WaluigisTreasureHunt.ips" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
