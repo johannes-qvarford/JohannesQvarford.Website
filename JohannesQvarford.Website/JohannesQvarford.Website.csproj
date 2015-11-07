@@ -147,7 +147,6 @@
     <Content Include="Content\Images\GitHub-Mark-Light-32px.png" />
     <Content Include="Content\Images\KaizoReturns.PNG" />
     <Content Include="Content\Images\WaluigisTreasureHunt.PNG" />
-    <Content Include="Content\Texts\About.txt" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
