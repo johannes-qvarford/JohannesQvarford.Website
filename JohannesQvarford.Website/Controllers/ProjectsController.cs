@@ -9,6 +9,7 @@
         public ActionResult GetProject(string title)
         {
             var viewName = RouteUtility.UrlSegmentToViewName(title);
+            ViewBag.Projects = ProjectUtility.Projects;
             return View(viewName);
         }
     }

@@ -137,16 +137,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ProjectUtility.cs" />
     <Compile Include="Models\RouteUtility.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\Appgradera.png" />
     <Content Include="Content\Images\GitHub-Mark-32px.png" />
     <Content Include="Content\Images\GitHub-Mark-Light-32px.png" />
-    <Content Include="Content\Images\KaizoReturns.PNG" />
-    <Content Include="Content\Images\WaluigisTreasureHunt.PNG" />
+    <Content Include="Content\Images\Gti.jpg" />
+    <Content Include="Content\Images\His.png" />
+    <Content Include="Content\Images\Me.jpg" />
+    <Content Include="Content\Images\KaizoReturns.png" />
+    <Content Include="Content\Images\WaluigisTreasureHunt.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

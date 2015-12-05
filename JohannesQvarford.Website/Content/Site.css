@@ -9,6 +9,11 @@ body {
     color: #FFF;
 }
 
+.body-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 a {
     color: #FFF;
     text-decoration: underline #FFF;
@@ -19,9 +24,6 @@ a:hover {
     color: #0A76C1;
 }
 
-.jumbotron {
-    background-color: #1A1A59;
-}
 
 .image-box {
     box-shadow: inset 0 0 20px #888888;
@@ -31,22 +33,16 @@ div.body-content {
     padding-top: 20px;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: whitesmoke;
-    border-width: 1px;
     border-color: black;
-    border-style: groove;
 }
 
-.container > div.navbar-header {
-    -ms-border-radius: 10px 10px 0 0;
-    border-radius: 10px 10px 0 0;
-    margin-left: 0;
-    margin-right: 0;
+body, html {
+    height: 100%;
+    padding-bottom: 50px;
 }
 
-button.navbar-toggle {
-    margin: 5px 20px 5px 5px;
-    background-color: #211858;
+.top {
+    min-height: 100%;
 }
 
 div.container {
@@ -57,6 +53,11 @@ div.container {
 
 /* NAVBAR */
 
+button.navbar-toggle {
+    margin: 5px 20px 5px 5px;
+    background-color: black; 
+}
+
 .navbar-inverse {
     background-color: white;
     border-width: 0px;
@@ -64,29 +65,27 @@ div.container {
 }
 
 .navbar-collapse {
-    background-color: #3B3176;
-    -ms-border-radius: 10px 10px 0px 0px;
-    border-radius: 10px 10px 0px 0px;
-}
-
-.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a, .dropdown a {
-    color: white !important;
+    background-color: black;
 }
 
 .navbar-header, ul.nav li {
-    background-color: #3B3176;
+    background-color: black;
 }
 
 .dropdown-menu {
     padding: 1px;
-    background-color: #3B3176;
+    background-color: black;
 }
  
-.navbar-header:hover, ul.nav li:hover, .navbar-inverse .navbar-nav > .open > a,
-.navbar-inverse .navbar-nav > .open > a:hover,
-.navbar-inverse .navbar-nav > .open > a:focus {
-    background-color: #211858;
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a:hover, .dropdown {
+    color: #0A76C1;
 }
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a, .dropdown {
+    color: white;
+}
+
+
 
 .navbar a {
     text-decoration: none;
@@ -95,8 +94,7 @@ div.container {
 /* FOOTER */
 
 footer {
-    background-color: #3B3176;
-    border-radius: 0px 0px 10px 10px;
+    background-color: black;
 }
 
 footer * {
@@ -106,6 +104,35 @@ footer * {
 
 footer a:hover {
     text-decoration: none;
+}
+
+/* HOME */
+
+.jumbotron2 {
+    background-color: white;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.jumbotron2 img {
+    float: left;
+    max-width: 200px;
+    margin-right: 20px;
+}
+
+.jumbotron2 p {
+    font-size: 24px;
+}
+
+.jumbotron2 a {
+    color: black;
+    text-decoration: underline #FFF;
+    font-weight: bold;
+}
+
+.jumbotron2 a:hover {
+    color: #0A76C1;
 }
 
 /* ABOUT */
@@ -129,6 +156,20 @@ div.about-section {
     background-color: #2D6E12;
 }
 
+.about-early-years img {
+    float: left;
+    width: 300px;
+    height: 220px;
+    margin: 10px;
+}
+
+.about-early-years img:nth-of-type(2) {
+}
+
+.about-early-years p {
+    clear: left;
+}
+
 .about-early-years-image {
     text-align: center;
     margin: 10px auto;
@@ -142,8 +183,27 @@ div.about-section {
     background-color: chocolate;
 }
 
+.about-education img:nth-of-type(1) {
+    width: 250px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.about-education img:nth-of-type(2) {
+    width: 250px;
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
 .about-proffesional-career {
-    background-color: darkorchid;
+    background-color: #07516A;
+}
+
+.about-proffesional-career img {
+    width: 50%;
+    margin-bottom: 20px;
 }
 
 /* PROJECTS */
