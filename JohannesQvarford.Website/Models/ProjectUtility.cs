@@ -6,7 +6,8 @@
     {
         private static readonly string[] projects =
             {
-                "Case-Based Reasoning"
+                "Case-Based Reasoning",
+                "Winter Dreams"
             };
 
         public static IReadOnlyCollection<string> Projects => projects;

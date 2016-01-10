@@ -214,6 +214,16 @@ div.about-section {
     margin: 10px;
 }
 
+.project-abstract img {
+    float: left;
+    width: 20%;
+    margin-right: 10px;
+}
+
+.project-abstract a:hover {
+    color: #1A1A59;
+}
+
 .project-summary-language, .project-summary-period, .project-summary-group {
     width: 30%;
     display: inline-block;
@@ -221,8 +231,18 @@ div.about-section {
     font-weight: bold;
 }
 
+.project h1 {
+    text-align: center;
+}
+
+.project-image {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 .project {
-    background-color: #303D74;
+    background-color: #1A1A59;
 }
 
 .project-abstract {
