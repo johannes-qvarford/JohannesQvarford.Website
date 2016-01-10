@@ -1,6 +1,4 @@
 ﻿@using JohannesQvarford.Website.Models
-@{
-}
 
 <!DOCTYPE html>
 <html>
@@ -9,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-
+    @RenderSection("Styles", required: false)
 </head>
 <body>
     <div class="container top">
@@ -71,6 +68,6 @@
     </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

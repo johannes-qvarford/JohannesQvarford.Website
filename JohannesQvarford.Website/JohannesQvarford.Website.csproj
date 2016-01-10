@@ -142,6 +142,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\about.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\Appgradera.png" />
@@ -154,10 +155,11 @@
     <Content Include="Content\Images\KaizoReturns.png" />
     <Content Include="Content\Images\WaluigisTreasureHunt.png" />
     <Content Include="Content\Images\WinterDreamsBig.jpg" />
+    <Content Include="Content\project.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\Downloads\Programmeringsolympiaden2012.pdf" />
@@ -185,13 +187,12 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Projects\CaseBasedReasoning.cshtml" />
     <Content Include="Views\Projects\WinterDreams.cshtml" />
+    <Content Include="Views\Shared\_Project.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
