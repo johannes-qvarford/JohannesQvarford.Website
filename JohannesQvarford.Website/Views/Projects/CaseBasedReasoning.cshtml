@@ -2,6 +2,10 @@
     Layout = "~/Views/Shared/_Project.cshtml";
 }
 
+@section Styles {
+    @Styles.Render("~/Content/case-based-reasoning")
+}
+
 <div class="project">
     <h1>A Case-Based Reasoning Approach to A Chess AI Using Shallow Similarity</h1>
     <div class="project-abstract">
@@ -46,7 +50,7 @@
             <li>Even if the initial implementation and representations where replaced, they were quick to develop, and <strong>led to clearer code</strong>.</li>
             <li>Due to the non-existance of state-sharing, it was <strong>easy to scale the program</strong> to simulate multiple chess games in parallell using PLINQ.</li>
         </ul>
-        In the end, this experience has lead me to <strong>develop in a more functional style</strong>, and writing more unit tests.
+        This experience has lead me to <strong>develop in a more functional style</strong>, and writing more unit tests.
         Unfortunatly, sometimes the pros aren't worth it on short projects with rapidly changing requirements.
     </p>
 </div>

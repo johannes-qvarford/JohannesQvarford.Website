@@ -1,10 +1,18 @@
 ﻿namespace JohannesQvarford.Website
 {
+    using System.Collections.Generic;
+    using System.Linq;
     using System.Web.Optimization;
 
-    public class BundleConfig
+    using Models;
+
+    public static class BundleConfig
     {
-        // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
+        private static readonly string[] SingleStyles = { "project", "about" };
+
+        private static readonly IList<string> ProjectStyles = 
+            ProjectUtility.Projects.Select(RouteUtility.TitleToUrlSegment).ToArray();
+
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
@@ -13,8 +21,6 @@
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
-            // Use the development version of Modernizr to develop with and learn from. Then, when you're
-            // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
@@ -25,11 +31,11 @@
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
-            bundles.Add(new StyleBundle("~/Content/project").Include(
-                      "~/Content/project.css"
-                ));
-            bundles.Add(new StyleBundle("~/Content/about").Include(
-                       "~/Content/about.css"));
+
+            foreach (var style in SingleStyles.Concat(ProjectStyles))
+            {
+                bundles.Add(new StyleBundle("~/Content/" + style).Include("~/Content/" + style + ".css"));
+            }
         }
     }
 }

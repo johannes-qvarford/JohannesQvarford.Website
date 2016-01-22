@@ -145,16 +145,20 @@
     <Content Include="Content\about.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\winter-dreams.css" />
+    <Content Include="Content\case-based-reasoning.css" />
     <Content Include="Content\Images\Appgradera.png" />
     <Content Include="Content\Images\Case Based Reasoning Image.jpg" />
     <Content Include="Content\Images\GitHub-Mark-32px.png" />
     <Content Include="Content\Images\GitHub-Mark-Light-32px.png" />
     <Content Include="Content\Images\Gti.jpg" />
     <Content Include="Content\Images\His.png" />
+    <Content Include="Content\Images\LunchLadySimulatorBig.jpg" />
     <Content Include="Content\Images\Me.jpg" />
     <Content Include="Content\Images\KaizoReturns.png" />
     <Content Include="Content\Images\WaluigisTreasureHunt.png" />
     <Content Include="Content\Images\WinterDreamsBig.jpg" />
+    <Content Include="Content\lunch-lady-simulator.css" />
     <Content Include="Content\project.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -164,6 +168,8 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\Downloads\Programmeringsolympiaden2012.pdf" />
     <Content Include="Content\Downloads\WaluigisTreasureHunt.ips" />
+    <None Include="Properties\PublishProfiles\johannesqvarford - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\johannesqvarford - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -193,6 +199,7 @@
     <Content Include="Views\Projects\CaseBasedReasoning.cshtml" />
     <Content Include="Views\Projects\WinterDreams.cshtml" />
     <Content Include="Views\Shared\_Project.cshtml" />
+    <Content Include="Views\Projects\LunchLadySimulator.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,6 +1,12 @@
-﻿@{
+﻿@using JohannesQvarford.Website.Models
+@{
     Layout = "~/Views/Shared/_Project.cshtml";
 }
+
+@section Styles {
+    @Styles.Render("~/Content/winter-dreams")
+}
+
 <div class="project">
     <h1>Winter Dreams</h1>
     <img class="project-image" src="~/Content/Images/WinterDreamsBig.jpg" />
@@ -25,7 +31,7 @@
         </strong>
     <p>
     <p>
-        A demo of the game was completed in June 2013, and the source code for the demo can be found <a href="https://github.com/johannes-qvarford/Winter-Dreams">here</a>.
+        A demo of the game was released in April 2013, and the source code for the demo can be found <a href="https://github.com/johannes-qvarford/Winter-Dreams">here</a>.
         A trailer for the demo was also released <a href="https://www.youtube.com/watch?v=A5969PjI02I&feature=youtu.be">here</a>.
     </p>
     <p>
@@ -36,7 +42,6 @@
 
 
     <h2>As a Programmer</h2>
-    <h3>Dynamic Configuration</h3>
     <p>
         I was in charge of the <strong>level loading system</strong>, which was eventually expanded for loading settings and entity type properties.
         We used <strong>Tiled</strong> to design levels, because it was the first best editor we could find that supported isomorphic 2D levels.
@@ -111,4 +116,16 @@
         for not contributing enough, but creating a good game at a low cost wasn't the main goal of the school project.
     </p>
 
+    <h2>Summary</h2>
+    <p>
+        While it wasn't always easy, we managed to crank out a good demo with interesting features.
+        I learned a lot about how to effectivly work in a group and how to use a lot of programming libraries.
+        I liked being a programming lead a lot, and I really enjoyed planning the project and overseeing the programmers' work,
+        making sure they finished their tasks on time. Still, I sometimes struggled as a leader, and this project taught me more than
+        anything, not to do half-measures.
+        I shouldn't have given tasks the unmotivated programmer for the sake of giving tasks,
+        I should have consulted with the teachers, to at best be given a solution, and at worst be given input.
+        I also shouldn't have given the troubling programmer a task and then not checked up on how he was doing.
+        I carried these lessons with me, to my next project: @Html.ProjectActionLink("Lunch Lady Simulator").
+    </p>
 </div>

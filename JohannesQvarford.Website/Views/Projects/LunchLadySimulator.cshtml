@@ -1,0 +1,91 @@
+﻿@{
+    Layout = "~/Views/Shared/_Project.cshtml";
+}
+
+@section Styles {
+    @Styles.Render("~/Content/lunch-lady-simulator")
+}
+
+<div class="project">
+    <h1>Lunch Lady Simulator</h1>
+    <img class="project-image" src="~/Content/Images/LunchLadySimulatorBig.jpg" />
+    <div class="project-summary">
+        <div class="project-summary-language">Language: C#</div>
+        <div class="project-summary-period">Year: 2014</div>
+        <div class="project-summary-group">Institution: HiS</div>
+    </div>
+
+    <h2>Introduction</h2>
+    <p>
+        Lunch Lady Simulator is a <strong>comical physics based simulator</strong> about being a lunch lady.
+        The goal of the game is to serve as many customers as possible while struggling with
+        <strong>wonky yet entertaining controls</strong>. It draws heavy inspiration from Surgeon Simulator.
+    </p>
+    <p>
+        The game features various physics based food items and tools, <strong>FMOD</strong> integrated music,
+        voice acting and automatically generated customers.
+    </p>
+    <p>
+        A demo of the game was finished in June 2014, and the source code can be found on <a href="https://github.com/johannes-qvarford/LunchLadySimulator">github</a>.
+        Lunch Lady Simulator is part of the <a href="http://democreativity.com/games">Democreativity</a> project, encouraging creative game development.
+        The project was developed during <a href="http://www.his.se/om-oss/Utbildningar-och-amnen/Data-och-IT/Microsoft-Game-Camp-2014/">Microsoft Game Camp 2014</a>
+        which was a great opportunity for game developers to program towards various Microsoft devices.
+        There's a <a href="https://www.youtube.com/watch?v=TV94WJM8CO0">playthrough</a> available of the demo, by the youtuber DualDGaming.
+    </p>
+
+    <p>
+        This project was a bit of a <strong>struggle</strong>, and I had to share the role of lead programmer throughout the project.
+        As a lead, I had to organize the other programmers and communicate with the other leads.
+        I was also the person responsible for handling input, arm physics and soup physics.
+    </p>
+
+    <h2>As a programmer</h2>
+    <p>
+        I was assigned to develop the main <strong>physical parts</strong> of the game. We were using <strong>Unity</strong>, which took care of a lot of the work,
+        and allowed me to try out <strong>different stategies</strong> from a <strong>higher abstraction level</strong>. While it may normally have been good
+        to let a designer string together a few physical components, the high demands of the design meant that the <strong>arms had to be hand coded</strong>.
+        For example: The arms are so heavy that they (and any tools they are holding) should never be pushed by anything.
+        At the same time, the arms shouldn't push the food items too far away when they touch, meaning that the arms both had a
+        great mass (don't get pushed by anything) and a ligher mass (don't excert too much force) at the same time.
+    </p>
+    <p>
+        Lunch Lady Simulator had a lot of <strong>different control schemes</strong> during development that needed to be tested and integrated into the game.
+        There was a control scheme for keyboard, one for single player controller, one for co-op controller and one for <strong>kinect</strong>.
+        While another programmer handled kinect programming, It was hard to manage all these different control schemes due to limitations
+        in Unity. When checking if e.g. the player is moving their arm forward, you had to <strong>dynamically construct a string</strong> that specified
+        the control scheme, and then check the key was down (on the keyboard) or the trigger was pressed down enough (on the controller).
+        Given how well known and common this issue with Unity is, there was <strong>probably an asset available on the Asset Store</strong> that could've
+        helped us, but we ran on a <strong>0 SEK budget</strong> without sallery, and it wouldn't be fair to the other teams to gain such an advantage through monetary means.
+    </p>
+
+    <h2>As a lead</h2>
+    <p>
+        In the beginning of the project, I had high hopes. I was <strong>able to assign big tasks</strong> to the other programmers, and it looked like everyone
+        would be occupied for a while. I was <strong>unfortunatly wrong</strong> about that, and quickly discovered that the programmer who was supposed
+        to do water physics, was unable too, partly because of limitations in Unity and performance constraints.
+        Meanwhile, I was <strong>too occupied with the physics implementation to manage the team</strong> and while we all developed out parts of the game,
+        we had not merged our work by week 4. That's when another programmer stepped in to take charge of the programmers, and he <strong>took over as a lead</strong>
+        for the time being.
+    </p>
+    <p>
+        Later in the project, he was often away implementing the kinect support (the devkits were in a different building) so I had to take over for him.
+        By the end of the project, I was fully <strong>back in action as the lead programmer</strong>, even though it wasn't explicitly stated before the end of the project.
+    </p>
+    <p>
+        To be honest, I was really <strong>stressed out during the project</strong>. I had just joined <strong>Deedly Games</strong>, and was working there on my spare time.
+        Since I worked on the project for 40 hours a week and worked at Deedly Games for 20 hours a week, I did <strong>not have a single free day</strong>
+        to relax. I probably shouldn't have handled the physics as well as taking on a lead role, as the <strong>physics consumed too much of my time</strong>,
+        which should've gone to managing the other programmers. I just felt at the time that the physics was the hardest and most time consuming
+        task, and that <strong>we wouldn't have finished on time with a good result, if one of the other programmers handled it</strong>.
+        I probably shouldn't have put soo much weight on my shoulders and just accepted that I <strong>couldn't put the well-being of the project
+        over my own</strong>.
+    </p>
+
+    <h2>Summary</h2>
+    <p>
+        Despite bumps on the road, the project was finished on time and drew a <strong>big audience</strong> which really enjoyed it, particularly the co-op mode.
+        I learned a lot about the features and limitations of Unity, as well as many game physics concepts and applications.
+        Throughout the project I realized that I <strong>couldn't do everything</strong> and please everyone, and that I had to put myself before the project.
+        Nowadays, I <strong>never do heavy crunches during longer periods of time</strong>, because I know that they can have a devestating effect.
+    </p>
+</div>

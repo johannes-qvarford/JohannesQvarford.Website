@@ -19,7 +19,8 @@
                 .Replace('ä', 'a')
                 .Replace('ö', 'o')
                 .Replace(":", "")
-                .Replace("--", "-");
+                .Replace("--", "-")
+                .ToLower();
         }
         
         public static string UrlSegmentToViewName(string urlSegment)

@@ -1,0 +1,19 @@
+﻿.project {
+    background-color: #34134D;
+}
+
+.project-summary {
+    background-color: #220B33;
+    position: relative;
+}
+
+.project-abstract {
+    background-color: #220B33;
+}
+
+.project-abstract img {
+    float: left;
+    width: 20%;
+    min-width: 300px;
+    margin-right: 10px;
+}

@@ -4,11 +4,7 @@
     margin: 10px;
 }
 
-.project-abstract img {
-    float: left;
-    width: 20%;
-    margin-right: 10px;
-}
+
 
 .project-abstract a:hover {
     color: #1A1A59;
@@ -29,17 +25,4 @@
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
-}
-
-.project {
-    background-color: #1A1A59;
-}
-
-.project-abstract {
-    background-color: #0A76C1;
-}
-
-.project-summary {
-    background-color: #9C344C;
-    position: relative;
 }
