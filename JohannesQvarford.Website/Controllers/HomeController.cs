@@ -17,5 +17,11 @@
             ViewBag.Projects = ProjectUtility.Projects;
             return View();
         }
+
+        public ActionResult Cv()
+        {
+            ViewBag.Projects = ProjectUtility.Projects;
+            return View();
+        }
     }
 }

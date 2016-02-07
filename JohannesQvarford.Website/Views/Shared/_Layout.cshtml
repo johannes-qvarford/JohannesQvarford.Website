@@ -31,10 +31,11 @@
                             <ul class="dropdown-menu">
                                 @foreach (string project in ViewBag.Projects)
                                 {
-                                <li>@Html.ProjectActionLink(project)</li>
+                                    <li>@Html.ProjectActionLink(project)</li>
                                 }
                             </ul>
                         </li>
+                        <li>@Html.ActionLink("Cv", "Cv", "Home")</li>
                     </ul>
                 </div>
             </div>

@@ -1,0 +1,91 @@
+﻿@{
+    ViewBag.Title = "My Cv";
+}
+
+@section Styles {
+    @Styles.Render("~/Content/cv")
+}
+
+<div class="download-links">
+    <a href="@Url.Content("~/Content/Downloads/Johannes Qvarford CV.pdf")">Download as a pdf.</a>
+</div>
+
+<div class="cv">
+    <div class="cv-header">
+        <div class="contact-info">
+            <h1 class="title">CV</h1>
+            <p class="name">Johannes Qvarford</p>
+            <p class="street">Käpplundavägen 9D</p>
+            <p class="town">541 41 Skövde</p>
+            <p class="phone">076-249 98 52</p>
+            <p class="mail">
+                <a href="mailto:johannes.qvarford@gmail.com">johannes.qvarford@gmail.com</a>
+            </p>
+            <p class="website">@Html.ActionLink("johannesqvarford.com", "Index", "Home")</p>
+        </div>
+        <div class="picture">
+            <img src="@Url.Content("~/Content/Images/Me.jpg")"/>
+        </div>
+    </div>
+
+    <div class="cv-content">
+        <div class="jobs">
+            <h2>Anställningar</h2>
+            <div>
+                <h3 class="job-company">Appgradera AB, Skövde</h3>
+                <h3 class="job-work-time">mar 2014 -</h3>
+                <p>
+                    Delgrundare av Appgradera AB. Delverkade i projektplanering och design av mjukvaruprodukter.
+                    Skrev en stor del av koden i alla projekt.
+                </p>
+                <p>
+                    Produkter som utvecklades inkluderar webappar, mobilappar och desktopprogram.
+                    ASP.NET MVC med AngularJS användes oftast för webappar,
+                    WPF för desktopprogram, och både native och Cordova för mobilappar.
+                </p>
+            </div>
+        </div>
+
+        <div class="education">
+            <h2>Utbildning</h2>
+            <div>
+                <h3 class="education-course">Kandidatexamen i Datalogi (120p), Högskolan i Skövde</h3>
+                <h3 class="education-time">aug 2012 – jun 2015</h3>
+                <p>
+                    Spelutveckling – programmering som huvudområde. Gav mig många praktiska kunskaper,
+                    speciellt under två stora grupprojekt som programmerar-lead. Läste programmering i C++/C#, databassystem,
+                    operativsystem och assembly mm. Kom på första plats i en kurstävling som gick ut på att implementera listsortering i MIPS assembly.
+                </p>
+            </div>
+            <div>
+                <h3 class="education-course"> Datatekniska programmet, Göteborgs Tekniska Institut </h3>
+                <h3 class="education-time">aug 2009 – jun 2012</h3>
+                <p>
+                    Mitt gymnasieprogram där jag fick intresse att lära mig programmering.
+                    Läste bland annat programmering i C++, lokala nätverk och datorkommunikation.
+                    Deltog i den nationella programmeringsolympiaden 2012 för gymnasieelever och kom på delad 16:e plats.
+                </p>
+            </div>
+        </div>
+
+        <div class="programming-knowledge">
+            <h2>Programmeringskunskaper</h2>
+            <p>Mycket goda kunskaper: C#, F#, Java, C++, HTML5, CSS3, Javascript, MS SQL, MySQL, ASP.NET MVC, WPF, Cordova, AngularJS, NUnit.</p>
+            <p>Goda kunskaper: Objective-C, PHP, KnockoutJS.</p>
+            <p>Har använt och utvecklat på Windows, OS X och Linux.</p>
+        </div>
+
+        <div class="languages">
+            <h2>Språk</h2>
+            <ul>
+                <li>Svenska, modersmål</li>
+                <li>Engelska, mycket bra i skrift, ganska bra i tal</li>
+            </ul>
+        </div>
+
+        <div class="references">
+            <h2>References</h2>
+            Referenser lämnas på förfrågan.
+        </div>
+    </div>
+</div>

@@ -1,0 +1,81 @@
+﻿.download-links {
+    background-color: #000;
+    margin: 20px;
+    text-align: center;
+    padding: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.cv, .cv a {
+    text-align: center;
+    color: black;
+}
+
+.cv {
+    max-width: 800px;
+    margin: auto;
+}
+
+.cv > * {
+    text-align: left;
+}
+
+.cv-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.cv-header > * {
+    justify-content: flex-end;
+}
+
+.contact-info {
+    flex-grow: 1;
+}
+
+.contact-info > * {
+    font-weight: bold;
+}
+
+.picture {
+    flex-grow: 0;
+}
+
+.picture img {
+    max-width: 200px;
+}
+
+
+h2 {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+.jobs {
+    margin-top: 50px;
+}
+
+.job-company, .education-course {
+    display: inline;
+    float: left;
+}
+
+.job-work-time, .education-time {
+    display: inline;
+    float: right;
+}
+
+.jobs > div > p:first-of-type, .education > div > p:first-of-type {
+    clear: both;
+}
+
+.languages ul {
+    list-style-type: none;
+    padding-left: 0;
+}

@@ -144,7 +144,7 @@
   <ItemGroup>
     <Content Include="Content\about.css" />
     <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\cv.css" />
     <Content Include="Content\winter-dreams.css" />
     <Content Include="Content\case-based-reasoning.css" />
     <Content Include="Content\Images\Appgradera.png" />
@@ -161,13 +161,14 @@
     <Content Include="Content\lunch-lady-simulator.css" />
     <Content Include="Content\project.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\Downloads\Programmeringsolympiaden2012.pdf" />
     <Content Include="Content\Downloads\WaluigisTreasureHunt.ips" />
+    <Content Include="Content\Downloads\Johannes Qvarford CV.pdf" />
     <None Include="Properties\PublishProfiles\johannesqvarford - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\johannesqvarford - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -200,14 +201,15 @@
     <Content Include="Views\Projects\WinterDreams.cshtml" />
     <Content Include="Views\Shared\_Project.cshtml" />
     <Content Include="Views\Projects\LunchLadySimulator.cshtml" />
+    <Content Include="Views\Home\Cv.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />

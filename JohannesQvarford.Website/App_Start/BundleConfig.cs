@@ -8,7 +8,7 @@
 
     public static class BundleConfig
     {
-        private static readonly string[] SingleStyles = { "project", "about" };
+        private static readonly string[] SingleStyles = { "project", "about", "cv" };
 
         private static readonly IList<string> ProjectStyles = 
             ProjectUtility.Projects.Select(RouteUtility.TitleToUrlSegment).ToArray();
