@@ -1,6 +1,7 @@
 ﻿@using JohannesQvarford.Website.Models
 
 @{
+    Layout = "~/Views/Shared/_Layout.sv.cshtml";
     ViewBag.Title = "About Me";
 }
 
@@ -11,8 +12,8 @@
 <div class="row about-introduction about-section">
     <h1>Introduction</h1>
     <p>
-        My name is Johannes Qvarford, and I'm the lead programmer and co-founder of <a href="appgradera.nu">Appgradera</a>.
-        I mainly program games and websites with Unity and ASP.net MVC, but I occasionally build HTML5 apps with Apache Cordova.
+        My name is Johannes Qvarford, and I'm the lead programmer and co-founder of <a href="http://appgradera.nu">Appgradera</a>.
+        I mainly program games, desktop application and websites with Unity, WPF and ASP.NET MVC, but I occasionally build HTML5 apps with Apache Cordova.
     </p>
 </div>
 
@@ -25,12 +26,12 @@
             When one of my video games stopped working, I swore that when I grew up, I would never make buggy software (little did I know how hard that promise would be to keep).<br/>
         </p>
         <p>
-            In first started writing code in junior high. Back then, I was making ROM hacks of Super Mario World, but I quickly realized that the existing tools were insufficient for designing enemies with custom behaviour.
+            I first started writing code in junior high. Back then, I was making ROM hacks of Super Mario World, but I quickly realized that the level editor was very limiting.
             That's when I learned assembly for the SNES to program new enemies.
-            I released demos for two rom hacks: Super Mario World: Kaizo Returns and Waluigi's Treasure Hunt.
+            I released demo versions for two rom hacks: Super Mario World: Kaizo Returns and Waluigi's Treasure Hunt.
         </p>
         <p>
-            The patch for Waluigi's Treasure Hunt is available <a href="@Url.Content("~/Content/Downloads/WaluigisTreasureHunt.ips")">Here</a>.
+            The patch for Waluigi's Treasure Hunt is available <a href="@Url.Content("~/Content/Downloads/WaluigisTreasureHunt.ips")">here</a>.
             In order to play through it, you will need a legal copy of a Super Mario World ROM and an SNES emulator like ZSNES.<br/>
             A playthrough of New Super Mario World: Kaizo Returns by AuthenticZac is available <a href="https://www.youtube.com/playlist?list=PL18DB9F871D181135">Here</a>.
         </p>
@@ -68,7 +69,7 @@
         <h2>Appgradera (2014-)</h2>
         <img src="/Content/Images/Appgradera.png"/>
         <p>
-            At Appgradera, my main tasks include programming games in Unity, websites in ASP.NET MVC and apps in Cordova.
+            At Appgradera, my matain tasks include programming games in Unity, websites in ASP.NET MVC and apps in Cordova.
             I estimate the scope of programming aspects of our projects and schedule our tasks.
             As a co-founder of a small startup, I sometimes also perform other small tasks like helping with designing games/websites/apps
             and taking care of our accounting.
@@ -79,7 +80,7 @@
             <a href="http://deedlygames.com/download/tinytrickytiles.html">Tiny Tricky Tiles</a>: an original puzzle game where you match colored tiles by pushing spare tiles onto the board. @*@Html.ProjectActionLink("Tiny Tricky Tiles", "Read More")*@
         </p>
         <p>
-            Visit appgradera at <a href="http://appgradera.nu">appgradera.nu</a>.
+            Visit appgradera at <a href="http://appgradera.nu">appgradera.nu</a> or <a href="http://deedlygames.com">deedlygames.com</a>.
         </p>
     </div>
 </div>

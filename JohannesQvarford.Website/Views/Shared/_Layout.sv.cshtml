@@ -30,11 +30,11 @@
                             <a href="/sv"><img src="~/Content/Images/Sweden-flat-icon.png" /></a>
                             <a href="/en"><img src="~/Content/Images/United-States-flat-icon.png" /></a>
                         </div></li>
-                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Huvudsida", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Om", "About", "Home")</li>
                         <li role="presentation" class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                                Projects &nbsp; <span class="caret"></span>
+                                Projekt &nbsp; <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
                                 @foreach (string project in ViewBag.Projects)
@@ -58,19 +58,19 @@
             <p class="col-md-12 col-sm-12 footer-cell">
                 <a href="https://se.linkedin.com/pub/johannes-qvarford/103/905/305">
                     <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_in_20x15.png" width="20" height="15" alt="View Johannes Qvarford's LinkedIn profile" style="vertical-align: middle;" border="0">
-                    &nbsp;View my LinkedIn profile
+                    &nbsp;Besök min LinkedIn profil
                 </a>
             </p>
             <p class="col-md-12 col-sm-12 footer-cell">
                 <a href="mailto:johannes.qvarford@gmail.com">
                     <span class="glyphicon glyphicon-envelope"></span>
-                    &nbsp; Send me a message
+                    &nbsp; Skicka ett meddelande
                 </a>
             </p>
             <p class="col-md-12 col-sm-12 footer-cell">
                 <a href="https://github.com/johannes-qvarford">
                     <img src="@Url.Content("/Content/Images/GitHub-Mark-Light-32px.png")"/>
-                    &nbsp;Fork me on GitHub
+                    &nbsp;Forka mig på GitHub
                 </a>
             </p>
         </div>

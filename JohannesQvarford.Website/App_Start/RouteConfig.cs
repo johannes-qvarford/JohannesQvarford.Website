@@ -11,12 +11,12 @@
             routes.LowercaseUrls = true;
             routes.MapRoute(
                 name: "Projects",
-                url: "projects/{title}",
-                defaults: new { controller = "Projects", action = "GetProject" });
+                url: "{language}/projects/{title}",
+                defaults: new { language = "en", controller = "Projects", action = "GetProject" });
             routes.MapRoute(
                 name: "Default",
-                url: "{action}",
-                defaults: new { controller = "Home", action = "Index" }
+                url: "{language}/{action}",
+                defaults: new { language = "en", controller = "Home", action = "Index" }
             );
         }
     }

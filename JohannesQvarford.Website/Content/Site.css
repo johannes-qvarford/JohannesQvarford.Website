@@ -88,6 +88,47 @@ button.navbar-toggle {
     text-decoration: none;
 }
 
+
+
+
+
+@media (min-width: 768px) {
+    .navbar-header .flags {
+        display: none;
+    }
+
+    .navbar-collapse .flags {
+        display: inline-block;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .navbar-header .flags {
+        display: inline-block;
+    }
+
+    .navbar-collapse .flags {
+        display: none;
+    }
+}
+
+.navbar-header .flags {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-left: 30px;
+}
+
+.navbar-collapse .flags {
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+.flags img {
+    width: 32px;
+    height: 32px;
+}
+
 ul.nav > li {
     margin-left: 20px;
 }

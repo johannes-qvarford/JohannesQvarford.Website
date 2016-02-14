@@ -5,6 +5,8 @@
     using System.Web.Optimization;
     using System.Web.Routing;
 
+    using JohannesQvarford.Website.ViewEngine;
+
     public class MvcApplication : HttpApplication
     {
         protected void Application_Start()
@@ -16,6 +18,8 @@
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            ViewEngines.Engines.Clear();
+            ViewEngines.Engines.Add(new LocalizationViewEngine());
         }
     }
 }

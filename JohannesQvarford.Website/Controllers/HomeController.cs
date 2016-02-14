@@ -6,19 +6,19 @@
 
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(string language)
         {
             ViewBag.Projects = ProjectUtility.Projects;
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult About(string language)
         {
             ViewBag.Projects = ProjectUtility.Projects;
             return View();
         }
 
-        public ActionResult Cv()
+        public ActionResult Cv(string language)
         {
             ViewBag.Projects = ProjectUtility.Projects;
             return View();

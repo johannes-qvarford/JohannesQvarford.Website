@@ -140,11 +140,14 @@
     <Compile Include="Models\ProjectUtility.cs" />
     <Compile Include="Models\RouteUtility.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewEngine\LocalizationViewEngine.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\about.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\cv.css" />
+    <Content Include="Content\Images\Sweden-flat-icon.png" />
+    <Content Include="Content\Images\United-States-flat-icon.png" />
     <Content Include="Content\winter-dreams.css" />
     <Content Include="Content\case-based-reasoning.css" />
     <Content Include="Content\Images\Appgradera.png" />
@@ -202,6 +205,9 @@
     <Content Include="Views\Shared\_Project.cshtml" />
     <Content Include="Views\Projects\LunchLadySimulator.cshtml" />
     <Content Include="Views\Home\Cv.cshtml" />
+    <Content Include="Views\Shared\_Layout.sv.cshtml" />
+    <Content Include="Views\Home\Index.sv.cshtml" />
+    <Content Include="Views\Home\About.sv.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
