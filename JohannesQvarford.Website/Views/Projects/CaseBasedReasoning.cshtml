@@ -16,7 +16,7 @@
             In this thesis, the following question is asked:
             <strong>"Is it possible to develop an AI-agent whose decision making is based on the technique Case-based Reasoning (CBR) that uses shallow similarity, and plays better using case bases based on the better players?"</strong>.
             An <strong>AI-agent has been developed that has played a number of games against itself</strong> using different case bases based on different players.
-            After examining the results, it turns out that the <strong>AI-agent plays so bad that it almost never manages to win</strong> regardless of case base, 
+            After examining the results, it turned out that the <strong>AI-agent plays so bad that it almost never manages to win</strong> regardless of case base, 
             which meant that <strong>it was not possible to grade them based on skill</strong>.
             It's could still be useful to examine if a CBR-based chess playing AI-agent could play chess with great skill.
         </p>
@@ -43,14 +43,15 @@
         This allowed me to test any changes I made, to make sure that I didn't introduce a bug.
     </p>
     <p>
-        So, in the end <strong>I had introduced mutability</strong> in order to solve the problem.
+        So, in the end <strong>I introduced mutability</strong> in order to solve the problem.
         However, that doesn't mean that it was a waste of time to program functionally at the start.
         <ul>
             <li>The immutability caused the class interfaces to shrink, <strong>which sped up the initial testing process</strong>.</li>
             <li>Even if the initial implementation and representations where replaced, they were quick to develop, and <strong>led to clearer code</strong>.</li>
-            <li>Due to the non-existance of state-sharing, it was <strong>easy to scale the program</strong> to simulate multiple chess games in parallell using PLINQ.</li>
+            <li>Due to the non-existance of mutable state-sharing, it was <strong>easy to scale the program</strong> to simulate multiple chess games in parallell using PLINQ.</li>
         </ul>
         This experience has lead me to <strong>develop in a more functional style</strong>, and writing more unit tests.
         Unfortunatly, sometimes the pros aren't worth it on short projects with rapidly changing requirements.
+        It's important to be pragmatic, and use the right tool for the right job.
     </p>
 </div>

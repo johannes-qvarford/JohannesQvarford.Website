@@ -208,6 +208,7 @@
     <Content Include="Views\Shared\_Layout.sv.cshtml" />
     <Content Include="Views\Home\Index.sv.cshtml" />
     <Content Include="Views\Home\About.sv.cshtml" />
+    <Content Include="Views\Projects\CaseBasedReasoning.sv.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
