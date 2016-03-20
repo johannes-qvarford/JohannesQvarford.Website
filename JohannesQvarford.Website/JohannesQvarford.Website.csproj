@@ -172,6 +172,7 @@
     <Content Include="Content\Downloads\Programmeringsolympiaden2012.pdf" />
     <Content Include="Content\Downloads\WaluigisTreasureHunt.ips" />
     <Content Include="Content\Downloads\Johannes Qvarford CV.pdf" />
+    <Content Include="Content\Downloads\Johannes Qvarford CV English.pdf" />
     <None Include="Properties\PublishProfiles\johannesqvarford - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\johannesqvarford - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -209,6 +210,7 @@
     <Content Include="Views\Home\Index.sv.cshtml" />
     <Content Include="Views\Home\About.sv.cshtml" />
     <Content Include="Views\Projects\CaseBasedReasoning.sv.cshtml" />
+    <Content Include="Views\Home\Cv.sv.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
