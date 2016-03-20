@@ -24,19 +24,21 @@ div.about-section {
     width: 300px;
     height: 220px;
     margin: 10px;
+    max-width: 95%;
+}
+
+@media (max-width: 705px) {
+    .about-early-years img {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: block;
+    }
 }
 
 .about-early-years p {
     clear: left;
-}
-
-.about-early-years-image {
-    text-align: center;
-    margin: 10px auto;
-    width: 220px;
-    height: 220px;
-    -ms-background-size: 220px 220px;
-    background-size: 220px 220px;
 }
 
 .about-education {
@@ -63,5 +65,7 @@ div.about-section {
 
 .about-proffesional-career img {
     width: 50%;
+    min-width: 250px;
+    min-height: 85px;
     margin-bottom: 20px;
 }

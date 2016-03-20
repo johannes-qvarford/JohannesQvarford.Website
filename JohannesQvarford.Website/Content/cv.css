@@ -31,6 +31,14 @@
     justify-content: flex-end;
 }
 
+@media (max-width: 443px) {
+    .cv-header > * {
+        display: block;
+        margin-left: auto;
+        margin-right: auto
+    }
+}
+
 .contact-info {
     flex-grow: 1;
 }
@@ -74,6 +82,8 @@ h3 {
 .jobs > div > p:first-of-type, .education > div > p:first-of-type {
     clear: both;
 }
+
+
 
 .languages ul {
     list-style-type: none;
