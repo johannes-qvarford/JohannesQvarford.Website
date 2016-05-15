@@ -212,6 +212,7 @@
     <Content Include="Views\Projects\CaseBasedReasoning.sv.cshtml" />
     <Content Include="Views\Home\Cv.sv.cshtml" />
     <Content Include="Views\Projects\WinterDreams.sv.cshtml" />
+    <Content Include="Views\Projects\LunchLadySimulator.sv.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
