@@ -16,7 +16,6 @@
         <div class="project-summary-group">Institution: HiS</div>
     </div>
 
-
     <h2>Introduction</h2>
     <p>
         Winter Dreams is a game about a winter princess that gets trapped in her dreams, and has to escape by solving puzzles.
@@ -53,19 +52,19 @@
         I created the so called <strong>Entity Registration System (ERS)</strong>. The ERS tied every entity type to a name, and
         a function for converting a serialized entity to an in-memory entity. When a serialized entity was found, its name was used to
         lookup the correct conversion function and create the entity. So called <strong>Entity Registrations</strong> were used to register the entity type
-        at startup. By declaring a global Entity Registration with a name and function, the entity was registred as soon as the game started.
+        at startup. By declaring a global Entity Registration with a name and a function, the entity type was registred as soon as the game started.
         It's debateable if using global variables like this was a good idea; it sped up compilation time, as there was no need for a big
         registration function that grew every time a new entity type was added, but at the same time it made the control flow less intuitive.
     </p>
     <p>
-        Compilation took a very long time on our school computers, and changing a single entity property's default value could result in a tripple digit compilation time
+        Compilation took a very long time on our school computers, and changing a single entity property's default value could result in a tripple digit compilation time in seconds.
         <strong>To speed up development, entity property default values and general settings were moved out of the source files, and into configuration files</strong> that
         were loaded when the game started. We still had to reload the game, which started to take longer and longer towards the end of the project,
         so it might've been fitting to continuously check for changes in the configuration files, and reload them as necessary during runtime.
     </p>
     <p>
         In order to make it easier for designers to control gameplay flow, I implemented the <strong>Trigger Activation System (TAV)</strong>. The TAV
-        tied every entity to a state, active or not and allowed them to be triggered. Different entities got triggered in different ways
+        tied every entity to a state, active or not and allowed them to be react to state changes. Different entities got triggered in different ways
         and behaved differently when they were activate or not, which was implemented by us programmers. However, <strong>how the entities reacted when they
         got triggered could be decided by the designers.</strong> For instance, we could program a trigger area that got triggered when its area
         collided with the player, and we could also program an entity whose only goal is play some dialogue when it was activated.
@@ -113,7 +112,7 @@
         <strong>
             In a corporate project I would have fired him
         </strong>
-        for not contributing enough, but creating a good game at a low cost wasn't the main goal of the school project.
+        for not contributing enough, but creating a good game at the lowest cost possible wasn't the main goal of the school project.
     </p>
 
     <h2>Summary</h2>
