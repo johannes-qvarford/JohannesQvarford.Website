@@ -145,6 +145,8 @@
   <ItemGroup>
     <Content Include="Content\about.css" />
     <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\Images\TinyTrickyTilesBig.png" />
+    <Content Include="Content\tiny-tricky-tiles.css" />
     <Content Include="Content\cv.css" />
     <Content Include="Content\Images\Sweden-flat-icon.png" />
     <Content Include="Content\Images\United-States-flat-icon.png" />
@@ -175,6 +177,7 @@
     <Content Include="Content\Downloads\Johannes Qvarford CV English.pdf" />
     <None Include="Properties\PublishProfiles\johannesqvarford - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\johannesqvarford - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\johannesqvarford.com - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -213,6 +216,9 @@
     <Content Include="Views\Home\Cv.sv.cshtml" />
     <Content Include="Views\Projects\WinterDreams.sv.cshtml" />
     <Content Include="Views\Projects\LunchLadySimulator.sv.cshtml" />
+    <Content Include="Views\Projects\TinyTrickyTiles.cshtml" />
+    <Content Include="Views\Projects\TinyTrickyTiles.sv.cshtml" />
+    <Content Include="Views\Shared\_Project.sv.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

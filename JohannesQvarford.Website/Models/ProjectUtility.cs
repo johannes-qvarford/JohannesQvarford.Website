@@ -8,7 +8,8 @@
             {
                 "Case-Based Reasoning",
                 "Winter Dreams",
-                "Lunch Lady Simulator"
+                "Lunch Lady Simulator",
+                "Tiny Tricky Tiles"
             };
 
         public static IReadOnlyCollection<string> Projects => projects;

@@ -1,0 +1,20 @@
+﻿.project {
+    background-color: #A3266F;
+}
+
+.project-summary {
+    background-color: #7A1C53;
+    position: relative;
+}
+
+.project-summary img {
+    float: left;
+    width: 20%;
+    min-width: 300px;
+    margin-right: 10px;
+}
+
+.game-state {
+    line-height: 0.9;
+    font-family: "Courier New", Courier, monospace;
+}
