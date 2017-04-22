@@ -1,0 +1,99 @@
+﻿<div class="project">
+    <h1>Winter Dreams</h1>
+    <img class="project-image" src="~/img/WinterDreamsBig.jpg" />
+    <div class="project-summary">
+        <div class="project-summary-language">Språk: C++</div>
+        <div class="project-summary-period">År: 2013</div>
+        <div class="project-summary-group">Institution: HiS</div>
+    </div>
+
+    <h2>Introduktion</h2>
+    <p>
+        Winter Dreams är ett spel som handlar om en vinterprincessa som fångas i sina drömmar och måste fly genom att lösa pussel.
+        Spelet använder en isomorf kamera, och inkludera features som <strong>röstskådespelad dialog, cutscenes, shader ljud, dynamiska fotavtryck och ukontrøll support.</strong>
+        Det stödjer <strong>dynamisk laddning av nivåer, inställningar och enhetstypegenskaper utan omkompilering.</strong>
+    <p>
+    <p>
+        Ett demo av spelet släpptes i april 2013, and källkoden för demot finns <a href="https://github.com/johannes-qvarford/Winter-Dreams">här</a>.
+        En trailer för demot har även släppts <a href="https://www.youtube.com/watch?v=A5969PjI02I&feature=youtu.be">här</a>
+    </p>
+    <p>
+        Det här var mitt första stora kollaborativa projekt vid Högskolan i Skövde, och dessutom min första stora roll som <strong>lead programmerare</strong>.
+        Det var mitt ansvar att organisera dem andra programmerarna, kommunicera mellan oss och de andra leads:en, och även att programmera en stor del av spelet.
+    </p>
+
+    <h2>Som en programmerare</h2>
+    <p>
+        Det var jag som hadde ansvar för <strong>nivåladdningssystemet</strong>, som allt eftersom utökades för att ladda inställningar och enhetstypegenskaper.
+        Vi använde <strong>Tiled</strong> till att designa nivåer, eftersom det var den första bästa editor:n vi hittade som stödde isomorfa 2D nivåer.
+        Nivåer from Tiled kunde exporteras till <strong>JSON</strong>, så min första uppgift var att använda ett bibliotek för att parse:a JSON, skapa enheterna och tiles:en,
+        och till slut köra spelet.
+    </p>
+    <p>
+        Spelet hade många olika enhetstyper, så för att hantera komplexiteten att parse:a nivåer, så skapade jag det så kallade <strong>Enhetsregistreringssystemet (ERS)</strong>.
+        ERS band varje enhetstyp till ett namn, och en fuktion för att konvertera en serialiserad enhet till en spelenhet. När en serialiserad hittades, så användes dess namn för
+        att slå upp den korrekta konverseringsfunktionen och ska enheten. Så kallade <strong>Enhetsregistrationer</strong> användes för att registrera enhetstyper vid uppstart.
+        Genom att deklarera en global Enhetsregistration med ett namn och en funktion så registrerades enhetstypen så fort som spelet började.
+        Det är debaterbart om användandet av globala variabler på detta sätt var en bra idé; det förbättrade kompilationshastigheten, eftersom det inte krävdes
+        en stor registreringsfunktion som ökade i storlek för varje enhetstyp som lades till, men sammtidigt gjorde det händelseflödet mindre intuitivt.
+    </p>
+    <p>
+        Det tog väldigt lång tid att kompilera på våra skoldatorer, och att ändra en enda enhetstyps egenskaps defaultvärde kunde resultera i en tresiffrig kompileringstid i sekunder.
+        <strong>För att öka utvecklingstakten så flyttades enhetstypernas egenskapernas defaultvärden och generella inställningar ut från källkoden och in i inställningsfiler</strong>
+        som lästes när spelet startades. Vi behövde fortfarande ladda om spelet, vilket började ta längre och längre tid mot slutet av projektet, så det kan ha varit värt passande
+        att kontinuerligt kolla efter förändringar i instöllningsfilerna, och ladda om den efter behov under körtid.
+    </p>
+    <p>
+        För att underlätta för designers att kontrollera spelflödet så implementerade jag <strong>Avlösningsaktiveringssystemet (RAS)</strong>.
+        AAS band varje enhet till ett läge, aktiv eller inte, och tillät dem reagera när deras läge ändrades (avlöstes). Olika enheter kunde avlösas
+        och regera på olika sätt, och kunde beté sig olika baserat på deras läge, vilket implementerades av programmerarna.
+        <strong>Hur enheterna reagerade när de avlöstes kunde bestämmas av designerna</strong>.
+        T.ex. vi kunde programmera ett avlösningsområde som avlöstes när dess område kolliderade med spelaren, och vi kunde programmera en enhet vars enda mål är att spela dialog när dess läge aktiveras.
+        Med dessa byggstenar kunde designers skapa olika områden som aktiverade olika dialogbitar när respektive område avlöstes.
+    </p>
+    <p>
+        Jag hanterade öven några mindre uppgifter, som att <strong>implementera ljus</strong>. Nivåerna var mörka med innehöll flera ljuskällor utspridda
+        i nivån, och en som omgav spelaren. Radien och ljusstyrkan av det omgivna ljuset ökade när spelaren helade sig själv, och minskade när de tog skada.
+        Effekten implementerades genom att använda an <strong>pixeleringsshader</strong>,
+        som mörklade pixlar baserat på deras avstånd till ljudkällorna.
+    </p>
+
+    <h2>Som en lead</h2>
+    <p>
+        Jag har programmerat sen gymnasiet, så vid denna punkt har jag haft mer programmeringserfarenhet än de andra.
+        Av denna anledning kände jag att jag behövde lära team:et hur man bäst strukturerar kod, dokumenterar och använder versionshanteringssystem.
+        Det kändes tungt att göra <strong>allt sammtidigt</strong>, but det kändes som om jag passade bäst för alla ansvarsområden.
+        I ett större projekt hade jag nog känt att det mer nödvändigt att delegera ansvaret för att undvika stress, men det fungerade bra för det här projektet.
+        Jag hade även tur att ha en <strong>talangfull programmerare vid min sida</strong> som hjälpte mig att brainstorm:a idéer och implementera några av de mer avancerade delarna av spelet.
+    </p>
+
+    <p>
+        Jag <strong>misslyckades som ledare</strong> när det kom till att hantera en av de andra programmerarna. Den andra programmeren hade koncentrationssvårigheter
+        och ignorerare ofta uppgifter och kodstandarder som vi kommit överens om, vilket gjorde jag och resten av programmerna arga.
+        Jag ville inte ta itu med situationen, så jag gav honom en stor uppgift med hopp om att det skulle hålla honom upptagen
+        och ur vägen under en lång tid. Trots det, på grund av mitt bristande ledarskap, <strong>så push:ade jag honom inte hårt nog att utföra uppgiften,</strong>
+        och den var flera veckor försenad. I borde inte låta mina personliga problemet med programmeraren gå ut över projektet.
+    </p>
+
+    <p>
+        En annan programmerare som var svårt att hantera hade ett annat problem. <strong>Han var inte särsklit bra eller entusiatisk när det kom till programmering</strong>
+        och sa rätt ut t.o.m. att han skull byta inriktning nästa läsår. Jag försölte ge honom enkla uppgifter att utföra
+        men det resulterade ofta i jag fick visa hur han skulle göra den mesta delen av hans arbete. Jag klandrar honom inte för att inte vilja programmera,
+        men det satte mig i en svår sits att bestämma <strong>hur han kunde bidra till projektet</strong>. Jag kunde ha gett honom ännu enklare uppgifter att utföra,
+        men dessa skulle behöva vara artificiellt skapade, inte vara av behov av projektet men ta värdefull tid att tänka ut.
+        Det skulle åtminstone ha gett honom något att visa för lärarna så att han inte flunkade kursen.
+        Jag kunde även ha visat honom hur han kunde utföra sina tilldelade uppgifter, men det skulle ha hållit mig upptagen när jag hade annat för mig.
+        Jag kunde även ha låtit honom vara sysslolös, men det hade lett till han hade flunkat kursen, och jag <strong>ville inte att han skulle kännas som en börda</strong>.
+    </p>
+
+    <h2>Sammanfattning</h2>
+    <p>
+        Det var inte alltid lätt, men vi lyckades få ut ett bra demo med intressanta features.
+        Jag lärde mig en hel del om att arbeta effektivt i grupp och hur man kan använda många olika programmeringsbibliotek.
+        Jag gillade att vara ett programmer lead väldigt mycket, och jag gillade verkligen att planera projekt och överse programmerarnas arbete,
+        och se till att utförde deras uppgifter i tid. Trots det, så hade jag ibland det svårt som ledare, och detta projekt lärde mig mer än någonting att inte göra saker halvdant.
+        Jag skulle inte ha gett uppgifter till den omotiverade programmeraren för sakens skull, jag skulle ha diskuerat med lärarna för att i bästa fall hitta en lösning och i värsta fall få fler perspektiv.
+        I skulle heller inte ha gett den problematiska programmeraren en uppgift och sedan inte följt upp på hans framsteg.
+        Jag bar dessa lärdommar med mig till mitt nästa projekt: @Html.ProjectActionLink("Lunch Lady Simulator").
+    </p>
+</div>

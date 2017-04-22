@@ -1,0 +1,18 @@
+﻿@{
+    Layout = "_LayoutBase";
+    ViewBag.IndexPageHeader = "Huvudsida";
+    ViewBag.AboutPageHeader = "Om";
+    ViewBag.ProjectPageHeader = "Projekt";
+    ViewBag.CvPageHeader = "Cv";
+    ViewBag.LinkedInPhrase = "Besök min LinkedIn profil";
+    ViewBag.EmailPhrase = "Skicka ett meddelande";
+    ViewBag.GitHubPhrase = "Forka mig på GitHub";
+}
+@section Styles {
+    @RenderSection("Styles", required: false)
+}
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}
+
+@RenderBody();

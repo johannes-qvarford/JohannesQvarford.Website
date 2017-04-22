@@ -1,0 +1,10 @@
+﻿@{
+    Layout = $"_Layout.{@ViewBag.Lang}";
+}
+
+@section Styles {
+    <link rel="stylesheet" type="text/css" href="~/css/project.css">
+    @RenderSection("Styles", required: false)
+}
+
+@RenderBody()

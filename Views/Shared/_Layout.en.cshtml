@@ -1,0 +1,18 @@
+﻿@{
+    Layout = "_LayoutBase";
+    ViewBag.IndexPageHeader = "Home";
+    ViewBag.AboutPageHeader = "About";
+    ViewBag.ProjectPageHeader = "Projects";
+    ViewBag.CvPageHeader = "Cv";
+    ViewBag.LinkedInPhrase = "View my LinkedIn profile";
+    ViewBag.EmailPhrase = "Send me a message";
+    ViewBag.GitHubPhrase = "Fork me on GitHub";
+}
+@section Styles {
+    @RenderSection("Styles", required: false)
+}
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}
+
+@RenderBody();
