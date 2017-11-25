@@ -6,10 +6,11 @@
     {
         private static readonly string[] projects =
             {
+                "Fam",
+                "Tiny Tricky Tiles",
                 "Case-Based Reasoning",
-                "Winter Dreams",
                 "Lunch Lady Simulator",
-                "Tiny Tricky Tiles"
+                "Winter Dreams",
             };
 
         public static IReadOnlyCollection<string> Projects => projects;

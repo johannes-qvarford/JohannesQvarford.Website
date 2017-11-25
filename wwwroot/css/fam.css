@@ -1,0 +1,15 @@
+
+.project {
+    background-color: #2589c2;
+}
+
+.project-summary {
+    background-color: rgb(82, 167, 209);
+    position: relative;
+}
+
+.project-image {
+    max-width: 150px;
+    display:block;
+    margin:auto;
+}
