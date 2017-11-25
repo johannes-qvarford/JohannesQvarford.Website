@@ -6,6 +6,7 @@
     {
         private static readonly string[] projects =
             {
+                "Solutions System",
                 "Fam",
                 "Tiny Tricky Tiles",
                 "Case-Based Reasoning",
