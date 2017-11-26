@@ -1,54 +1,92 @@
 <div class="project">
-    <h1>FAM</h1>
-    <img class="project-image" src="~/img/Bricknode.png" />
+    <h1>Solutions System</h1>
+    <img class="project-image" src="~/img/SolutionsSkovde.png" />
     <div class="project-summary">
-        <div class="project-summary-language">Languages: C#, Typescript, T-SQL</div>
-        <div class="project-summary-period">Years: 2016-2017</div>
-        <div class="project-summary-group">Company: Solutions Skövde</div>
+        <div class="project-summary-language">Språk: C#, Powershell, Javascript</div>
+        <div class="project-summary-period">År: 2017</div>
+        <div class="project-summary-group">Företag: Solutions Skövde</div>
     </div>
 
-    
-    <h2>Introduction</h2>
+    <h2>Introduktion</h2>
     <p>
-        At the fall of 2016 we were approached by Bricknode to help them build a financial module for a customer of theirs.
-        Three developers from Solutions Skövde including me were tasked with building the frontend and backend of the module.
-        The module was partly an enhancement to Bricknode Financial System (BFS), and a frontend for office workers to manage financial assets, including a custom access control system.
-    </p>
-    
-    <h2>In the beginning</h2>
-    <p>
-        Before the project officially began, I wrote a blueprint for what technologies we would use and how code would be organized.
-        I did this to make sure that we didn't do things in widely different ways. Some choices turned out to be good, while others weren't.
-        It especially made things hard for one of the developers when it came to code organization because of some over abstractions.
-        Since only one of the programmers wrote the frontend and the other wrote the backend, I definitely could've revised it earlier.
-        Towards the end, both of the programmers had come up with their own conventions that still adhered to most of the blueprint.
-        I was very excited to use som very new technology, but because of that we ran into problems that were hard to find solutions to on the internet.
+        Solutions System är ett ramverk jag utvecklade för att snabbt skapa nya appar åt en av våra klienter.
+        Det använder ett löst kopplat plugin-system för att framhäva app-uniformitet och flexibilitet och samtidigt undvika uppsvällning av paketberoenden.
+        Det är skrivet i C# och distribuerat som nuget-paket.
+        Verktygen för att skapa nya appar är skrivna i Javascript och Powershell, medan Chocolatey används för verktygsinstallation.
     </p>
 
-    <h2>As a lead</h2>
+    <h2>Syfte</h2>
     <p>
-        During the project, I was tasked with managing the other programmers as a lead: delegating work, reviewing code and writing documentation.
-        I also communicated directly with our contact person at Bricknode so that I understood what had to be implemented.
-        It worked pretty smoothly, but what we found out during the course of the project was that my role as mediator was neccessary at the time,
-        but it would've been preferable if all developers could've worked on both the frontend and the backend and spoke directly to our contact person.
-        We also noticed that work on the backend was completed much faster than the frontend, so I sometimes had to jump in to fill in the gap.
+        Vi utvecklade många små appar för vår klient över en lång period, men vi nådde en punkt där vi insåg att det var ohållbart att fortsätta som vanligt.
+        Vi stötte på följande problem:
+        <ul>
+            <li>
+                <em>Alla appar såg olika ut.</em> Eftersom det inte fanns ett etablerat sätt att implementera vissa features, så implementerades de på olika sätt i olika appar.
+                Detta gjorde det väldigt svårt att underhålla dem, eftersom en utvecklare var tvungen att ha förkunskapar om en given app för att effektivt kunna felsöka den och utöka dess funktionalitet.
+            </li>
+            <li>
+                <em>Förbätttringar bakportades inte till tidigare appar.</em>
+                Eftersom ingen app var lik den andra så var det svårt och tidskonsumerande att propagera förbättringar och buggfixar till gamla appar.
+                På grund av detta så propagerades nästan ingenting alls bakåt, vilket ökade feature-gapet och skillnaderna mellan apparna.
+            </li>
+            <li>
+                <em>Att skapa nya appar var tidskonsumerande och det var enkelt att introducera fel.</em>
+                Varje app innehöll mycket boilerplate, och det enda sättet att snabba på appskapningsprocessen var att copy-paste:a projekt och utföra namnbyten över hela projektet, vilket inte alltid fungerade felfritt.
+                Att skapa ett projekt i vårt versionshanteringssystem-repository var inget problem, men att lägga till IIS site:r och appar tog ibland timmar av felsökande på grund av ett stort antal odokumenterade steg.
+            </li>
+        </ul>
+        Detta skulle inte varit så illa om vi utvecklade relativt få projekt som inte inte behövde kontonuerligt underhåll, men för våra behov var det en mardröm.
     </p>
 
-    <h2>As a programmer</h2>
+    <h2>Tidiga skedet</h2>
     <p>
-        I developed a few things myself during the project. After 4 months our initial contract ended,
-        and only I continued working on the project on our side because they couldn't afford all of us.
-        I implemented a few basic resource management pages, including one for managing a shareholder's orders.
-        I also designed a small system for abstracting CRUD controller classes on the backend to reduce boilerplate and simplify testing.
-        We used aspnet core on the backend and Angular on the frontend. I had only a little bit of experience with Angular beforehand, so this project really made understand how to use it.
+        Ursprungligen försökte vi lösa problemet med halvbakade lösningar.
+        De första nuget-paketen byggdes parallellt under utvecklingen av nya appar, följde inte konventioner tillräckligt starkt, och alla paket berodde på varandra i slutändan.
+        Vi tog ett beslut att jag skulle göra en dedikerad insats för att bygga ett system som skulle bestå tidens prövningar.
     </p>
 
-    <h2>Conclusion</h2>
+    <h2>Systemet</h2>
     <p>
-        The project continued after we stopped working on it, and I got the impression that they were satisfied with our work.
-        Aside from some blunders in the original blueprint, I still think I did a good job. They must've felt so too, since they wanted me to continue working.
-        This wasn't the first time I was a lead, but it put into perspective on how important it can be to organize the workload so that no one is left twiddling their thumbs.
-        It also taught me to be more flexible when it came to programming conventions, so that people don't feel as forced to follow rules they don't agree with.
-        I learned a lot about Angular, and by using a bleeding edge version of dotnet core, it made me more aware of how important it is to use tested technologies.
+        Lösningen som jag utvecklade var Solutions System (SS), ett ramverk för webutveckling byggt ovanpå aspnet core.
+        Systemet använder plugins för att specifiera funktionalitet, som t.ex. vilka klasser som ska registreras för dependency injection,
+        and vilka steg som ska läggas till i http-anrop-pipeline:n och var.
+        Plugins kan vara beroende av andra plugins, och resolveras rekursivt.
+        En plugin har inställningar som kan kombineras och skrivas över med appens och andra plugins inställningar för den plugin:en.
+        Ta t.ex. en databas-plugin -  den tar en lista med Entity Framework DbContext subtyper, laddar deras kopplingssträngar, registrerar dem för dependency injection och migrerar den kopplade databasen till den senaste versionen.
+        En plugin för en specifik databas behöver bara indikera att den ville lägga till sin egen DbContext subtyp till databas-plugin:ens inställningar.
+        En huvudplugin skapades som hanterade saker som authorization, email, loggning och inställningshantering genom rekursivt beroende av andra plugins.
+        De flesta apparna använder huvudplugin:en, men om den inte passade en specifik app så kunde den appen använda extra plugins,
+        eller en alternativ plugin som fyller ett liknande syfte som huvudplugin:en, eller inte ha några plugin-beroenden alls.
+    </p>
+
+    <h2>Biblioteken</h2>
+    <p>
+        Biblioteken var organiserade baserat på paketberoenden, syfte och feature-tillhörighet.
+        Du hade Ext bibliotek som bara utökade funktionaliteten av ett existerande bibliotek, och så fanns det Serv bibliotek som innehöll gränssnitt och klasser som kunde användas för dependency injection.
+        Db bibliotek innehöll varsion Entity Framework DbContext subtyp och diverse klasser för att representera en databas, och Plug bibliotek använder Serv och Db bibliotek för att skapa plugins.
+        Det fanns flera bibliotek att hålla reda på, så för att stoppa appar från att ha alldeles för långa förvirrande listor med beroenden, så flyttades komplexiteten till en msbuild props-fil som alla appar refererade till.
+        Apparna bara indikerade vad de ville använda, som Bricknode Foundation System (BFS) integration och Ratsit integration, och props-filen listade ut vilka paket som behövdes.
+        Det var fortfarande en manuell process and copy-paste:a props-filen varje gång den uppdaterades, men det var ett bättre alternativ än att behöva leta runt i alla appars csproj filer varje gång.
+    </p>
+
+    <h2>Verktyg</h2>
+    <p>
+        Eftersom många nya utvecklare arbetade för våran klient, så behövde vi kunna sätta upp deras utvecklingsmiljö snabbt och låta dem skapa nya appar lätt.
+        Jag utvecklade verktyg för att lösa detta problem.
+        Verktygen var skriva i Powershell eftersom de använder en del Windows-specifik funktionalitet, och Javascript eftersom det fanns en bra projektgeneratorpaket på npm, men inte på nuget.
+        Allt en användare behövde göra för att skapa en app var att namnge det, ge det en titel och undertitel, indikera vilken IIS app/site som ska skulle skapas och vilken url som projekten skulle kunna nås ifrån.
+        Så fort projektet var skapat så kunde de lägga till och ta bort plugins hur mycket de ville och vara redå att publisera direkt.
+    </p>
+
+    <h2>Baksidor</h2>
+    <p>
+        Systemet fungerade bättre än förväntat, men det fanns fortfarande ett antal små problem med det.
+        Det gör det enklare att skapa vanliga appar med lite kod, men det är en del att lära sig utöver aspnet core, och att sätta upp utvecklingsmiljön ställer ibland till med problem.
+        Ändringar i den huvudsakliga props-filen propageras inte automatiskt, vilket kunde ha lösts genom att ladda ner den och byta ut den gamla filen på checkout och commit.
+        Alternativt så kunde filen ha laddats upp som ett nuget-paket och refererats till genom ett Import element med ett SDK attribut. <a href="https://github.com/Microsoft/msbuild/issues/1493">See här för mer information.</a>
+        Det var olyckligt att vi behövde använda både Powershell och Javascript, men det fanns ingen omedelbar lösning tillgänglig för dotnet-baserat projektskapande.
+        I efterhand skulle det mesta kunna ha lösts med en web app på servern som skapar versionshanteringsprojekt, IIS appar och site:r, och låter utvecklaren ladda ner en zip-fil med det genererade projektet.
+        Webappen kan inte sätta upp personens utvecklingsmiljö, men den kan generera ett avskalat Powershell-skript som gör det.
+        Ett antal vanliga mönster började dyka upp i apparna för att göra relativt enkla saker som skulle kunna ha abstraherats, även om det hade introducerat redundans i systemet.
     </p>
 </div>

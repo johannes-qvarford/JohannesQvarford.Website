@@ -9,7 +9,7 @@
     
     <h2>Introduction</h2>
     <p>
-        Solutions System is a framework i developed for quickly creating new apps for one of our clients.
+        Solutions System is a framework I developed for quickly creating new apps for one of our clients.
         It uses a loosly coupled plugin system to allow for app uniformity and flexibility while preventing package bloat.
         It's written in C# and distributed as nuget packages.
         The tools for creating new apps are written in Javascript and Powershell, and Chocolatey is used for tool installation.
@@ -70,7 +70,7 @@
 
     <h2>Tools</h2>
     <p>
-        Since many new developers were working for our clientn we needed to be able to setup their development environment quickly and allow them to create new apps easily.
+        Since many new developers were working for our client, we needed to be able to setup their development environment quickly and allow them to create new apps easily.
         I developed tools to solve this problem.
         The tools were written in Powershell because they used some Windows specific functionality, and Javascript because there was a good project generator package available on npm, but not on nuget.
         All a user had to do to create an app was to give a basic name to the project, give a title and subtitle, indicate what IIS site/app to create, and what url the project should be reachable from.
@@ -80,12 +80,13 @@
     <h2>Downsides</h2>
     <p>
         The system worked better than expected, but there were still some minor problems with it.
-        The props file is not propogated automatically, this could've been solved by downloading it and replacing the old file on checkout and commit.
-        Alternatively, the file could be uploaded as a nuget package and referred to through an Import statement with an SDK attribute. <a href="https://github.com/Microsoft/msbuild/issues/1493">See here for more information.</a>
+        It makes it easier to create common apps with smaller amounts of code, but there is a lot to learn on top of having to learn aspnet core.
+        Setting up the development environment sometimes causes problems too.
+        The props file is not propogated automatically which could've been solved by downloading it and replacing the old file on checkout and commit.
+        Alternatively, the file could be uploaded as a nuget package and referred to through an Import element with an SDK attribute. <a href="https://github.com/Microsoft/msbuild/issues/1493">See here for more information.</a>
         Using both Powershell and Javascript was unfortunate, but there was no immediate solutions avilable for dotnet project generation.
-        I would've prefered to have used dotnet core for the tools for homogeneity with the libraries, 
-        but it looked to complicated at the time to create an installer,
-        not to mention having to upload it to an archiving site and handle versioning. Perhaps Chocolatey could have helped with the last mentioned.
+        On second though, most things could've been solved with a web app on the server that creates the version control project, IIS apps and sites, and lets the developer download a zip file containing the newly created project.
+        The web app cannot setup the developer's development environment, but it can generate a scaled down Powershell script that does.
         Certain common patterns started to emerge in apps to do simple things, and that should probably have been abstracted, even if it would've introduced redundancies in the system.
     </p>
 </div>
